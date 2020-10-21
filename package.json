@@ -1,0 +1,16 @@
+{
+  "name": "aem-site-theme-builder",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "license": "MIT License, Copyright 2020 Adobe Systems Incorporated",
+  "main": "bin/index.js",
+  "bin": {
+    "aem-site-theme-builder": "./bin/index.js"
+  },
+  "scripts": {},
+  "dependencies": {
+    "shelljs": "^0.8.4",
+    "yargs": "^16.1.0"
+  }
+}
