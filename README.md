@@ -30,3 +30,9 @@ To deploy your theme to AEM Cloud just run:
 ```
 aem-site-theme-builder deploy
 ```
+
+## Contributing
+Contributions are welcomed! Read the [Contributing Guide](https://git.corp.adobe.com/ref-squad/aem-site-theme-builder/blob/master/CONTRIBUTING.md) for more information.
+
+## Licensing
+This project is licensed under the MIT License. See [LICENSE](https://git.corp.adobe.com/ref-squad/aem-site-theme-builder/blob/master/LICENSE.md) for more information.
