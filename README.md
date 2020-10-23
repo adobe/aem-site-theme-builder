@@ -63,8 +63,8 @@ dist/
 
 ## Contributing
 
-Contributions are welcomed! Read the [Contributing Guide](https://git.corp.adobe.com/ref-squad/aem-site-theme-builder/blob/master/CONTRIBUTING.md) for more information.
+Contributions are welcomed! Read the [Contributing Guide](.github/CONTRIBUTING.md) for more information.
 
 ## Licensing
 
-This project is licensed under the MIT License. See [LICENSE](https://git.corp.adobe.com/ref-squad/aem-site-theme-builder/blob/master/LICENSE.md) for more information.
+This project is licensed under the MIT License. See [LICENSE](LICENSE.md) for more information.
