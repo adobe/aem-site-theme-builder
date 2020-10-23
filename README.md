@@ -40,6 +40,7 @@ GIT_REPO=<github repository name>
 GIT_ARTIFACT_ID=<github artifactid>
 GIT_TOKEN=<github token>
 SITE=<your AEM Cloud site name>
+AEM_SITE_PROXY_PORT=<localhost proxy server port>
 ```
 
 Recommended way is to use / create `.env` file within your theme project repository. 
