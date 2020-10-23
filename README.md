@@ -1,6 +1,6 @@
 # AEM Site Theme Builder
 
-This repository contains scripts for building a Site Theme, ensuring compatibility to the requirements of AEM Site Templates.
+This repository contains scripts for building a Site Theme, ensuring compatibility to the requirements of AEM Site Templates.  Recommended way of integration is to install Theme Builder as a npm dependency of the Site Template Theme. This way `aem-site-theme-builder` commands can be used in NPM scripts. Good example of such integration can be found in [Basic Site Template](https://github.com/gabrielwalt/aem-sites-template-basic/blob/master/site.theme/package.json).
 
 ## Installation
 
@@ -19,16 +19,16 @@ The live preview will proxy a Site running on AEM Cloud (Author) to localhost an
 npx aem-site-theme-builder live
 ```
 
-The URLs to a Site Theme can be provided via `.env` described in [environment variables](#environmental-variables). In order to inject your locally compiled theme, the [location of compiled site theme](#expected-location-of-compiled-site-theme) must match.
+The URLs to a Site Theme can be provided via `.env` described in [environment variables](#environment-variables). In order to inject your locally compiled theme, the [location of compiled site theme](#expected-location-of-compiled-site-theme) must match.
 
 ### Theme Deployment
 
 1. Compile your theme and make the artifact available on Github. AEM Cloud will try to access `https://api.github.com/repos /%GIT_ORG%/%GIT_REPO%/actions/artifacts/%GIT_ARTIFACT_ID%/zip` in order to download the theme.
 1. Execute `npx aem-site-theme-builder deploy` in order to update the reference on AEM Cloud. 
 
-## Prerequisites
+## API
 
-### Environmental variables
+### Environment variables
 
 Theme builder scripts are based on the environment variables you will provide. These variables are used to be able to properly provide live preview and deploy functionalities of the AEM Site Theme Builder. Here is the list of required ones:
 ```
@@ -59,10 +59,6 @@ dist/
         a-font.font
         an-image.png
 ```
-
-## Integration with Site Templates
-
-AEM Site Theme Builder is meant to be used within Site Templates Theme. Recommended way of integration is to install Theme Builder as a dependency of the Site Template Theme. This way `aem-site-theme-builder` commands can be used in NPM scripts. Good example of such integration can be found in [Basic Site Template](https://github.com/gabrielwalt/aem-sites-template-basic/blob/master/site.theme/package.json).
 
 ## Contributing
 
