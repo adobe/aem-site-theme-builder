@@ -61,6 +61,10 @@ dist/
         an-image.png
 ```
 
+## Release and publish
+
+Run the "Release and publish" GitHub workflow and provide the semantic version you're about to release.
+
 ## Contributing
 
 Contributions are welcomed! Read the [Contributing Guide](.github/CONTRIBUTING.md) for more information.
