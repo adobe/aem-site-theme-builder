@@ -20,7 +20,7 @@ require('yargs')
     proxy(proxyConfig);
   })
   .command('deploy', 'Deploys your theme to AEM instance', (yargs) => {}, function (argv) {
-    shell.exec('dotenv -- cross-var curl -u %AEM_USER%:%AEM_PASS% -d \'prefixPath=/%GIT_ORG%/%GIT_REPO%/%GIT_ARTIFACT_ID%\' -d \'githubToken=%GIT_TOKEN%\' %URL%/conf/%SITE%.updatetheme.html');
+    shell.exec('dotenv -- cross-var curl \'site=%SITE%\' -d \'artifact=%GIT_ARTIFACT_ID%\' -d \'salt=%SALT%\' -d \'hash=HASH\' %URL%/aem/update.theme.html');
   })
   .help()
   .argv;
