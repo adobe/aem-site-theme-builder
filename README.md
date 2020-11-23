@@ -34,11 +34,9 @@ Theme Builder scripts are based on the environment variables you provide. These 
 
 ```
 URL=<AEM as a Cloud Serivce url to your site>
-AEM_USER=<username for AEM as a Cloud Service>
-AEM_PASS=<password for AEM as a Cloud Service>
 GIT_ORG=<github organization name>
 GIT_REPO=<github repository name>
-GIT_ARTIFACT_ID=<github artifactid>
+GIT_ARTIFACT_ID=<github artifact ID>
 GIT_TOKEN=<github token>
 SITE=<your AEM as a Cloud Service site name>
 AEM_SITE_PROXY_PORT=<localhost proxy server port>
