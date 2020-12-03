@@ -44,7 +44,7 @@ AEM_SITE_PROXY_PORT=<localhost proxy server port>
 
 Recommended way to define site variables is to use / create `.env` file within your theme project repository.
 
-### Expected Location of Compiled Site Theme
+### Expected Output of Compiled Site Theme
 
 You're free to use any build tools of your choice. The only contract with the Site Theme Builder is that the compiled artifact shall be provided as follows:
 
