@@ -1,6 +1,6 @@
 {
   "name": "@adobe/aem-site-theme-builder",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "",
   "author": "",
   "license": "MIT License, Copyright 2020 Adobe Systems Incorporated",
@@ -14,6 +14,6 @@
     "http-proxy": "1.18.1",
     "shelljs": "0.8.4",
     "yargs": "16.1.0",
-    "dotenv": "8.2.0" 
+    "dotenv": "8.2.0"
   }
 }
