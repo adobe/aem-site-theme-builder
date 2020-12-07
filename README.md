@@ -33,13 +33,9 @@ The URLs to a Site Theme can be provided via `.env` described in [environment va
 Theme Builder scripts are based on the environment variables you provide. These variables are used to properly provide live preview and deploy functionality of the AEM Site Theme Builder. Here is the list of required variables:
 
 ```
-AEM_URL=<AEM as a Cloud Serivce url to your site>
-GIT_ORG=<github organization name>
-GIT_REPO=<github repository name>
-GIT_ARTIFACT_ID=<github artifact ID>
-GIT_TOKEN=<github token>
-AEM_SITE=<your AEM as a Cloud Service site name>
-AEM_SITE_PROXY_PORT=<localhost proxy server port>
+AEM_URL=<URL of the AEM as a Cloud Service instance>
+AEM_SITE=<name of the AEM site>
+AEM_PROXY_PORT=<localhost proxy server port>
 ```
 
 Recommended way to define site variables is to use / create `.env` file within your theme project repository.
