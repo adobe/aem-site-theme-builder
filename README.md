@@ -11,20 +11,32 @@ npm install @adobe/aem-site-theme-builder --save-dev
 
 ## Usage
 
+### Proxy
+
+Proxy your site running on AEM as a Cloud Service to localhost and replace requests made to the Site Theme with your locally compiled version of the Site Theme.
+
+```
+npx aem-site-theme-builder proxy
+```
+
+The URLs to a Site Theme can be provided via `.env` described in [environment variables](#environment-variables). In order to inject your locally compiled theme, the [location of compiled site theme](#expected-location-of-compiled-site-theme) must match.
+
 ### Live Preview
 
-The live preview will proxy a site running on AEM as a Cloud Service (author) to localhost and replace requests made to the Site Theme with your locally compiled version of the Site Theme.
+The live preview will run proxy server (desribed above) as well browser sync functionality. Browser sync will point to the proxied page and will be looking for changes in the `dist` folder and will refresh the page each time you got a change.
 
 ```
 npx aem-site-theme-builder live
 ```
 
-The URLs to a Site Theme can be provided via `.env` described in [environment variables](#environment-variables). In order to inject your locally compiled theme, the [location of compiled site theme](#expected-location-of-compiled-site-theme) must match.
-
 ### Theme Deployment
 
 1. Compile your theme and make the artifact available on GitHub. AEM as a Cloud Service will try to access `https://api.github.com/repos/%GIT_ORG%/%GIT_REPO%/actions/artifacts/%GIT_ARTIFACT_ID%/zip` in order to download the theme.
 1. Execute `npx aem-site-theme-builder deploy` in order to update the reference on AEM as a Cloud Service.
+
+## Complete development workflow
+
+In order to make best use of theme-builder you have to run the live preview which provides proxy and browser sync functionalities. On top of that you need to make sure that you have additional watcher for your source files that triggers your theme build process which produces changes in the `dist` folder of your theme. This way after making change in your source file you will get your proxy page refreshed via browser sync.
 
 ## API
 
