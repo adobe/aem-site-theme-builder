@@ -17,12 +17,12 @@ const findPort = require('../lib/findPort');
 require('yargs')
   .scriptName('aem-site-theme-builder')
   .usage('$0 <cmd> [args]')
-  .command('proxy', 'Runs proxy to preview your theme with content from AEM', (yargs) => {}, async function (argv) {
+  .command('proxy', 'Runs proxy to preview your theme with content from AEM', () => {}, async function () {
     const CONFIG = require('../lib/proxyConfig');
     const port = await findPort(parseInt(CONFIG.port, 10));
     proxy({ ...CONFIG, port });
   })
-  .command('live', 'Runs live preview (proxy + browser sync) of your theme with content from AEM', (yargs) => {}, async function (argv) {
+  .command('live', 'Runs live preview (proxy + browser sync) of your theme with content from AEM', () => {}, async function () {
     const CONFIG = require('../lib/proxyConfig');
     const portProxy = await findPort(parseInt(CONFIG.port, 10));
     await proxy({ ...CONFIG, port: portProxy });
@@ -30,7 +30,7 @@ require('yargs')
     const portBrowserSync = await findPort(portProxy);
     browserSync({ port: portBrowserSync, portProxy });
   })
-  .command('deploy', 'Deploys your theme to AEM instance', (yargs) => {}, function (argv) {
+  .command('deploy', 'Deploys your theme to AEM instance', () => {}, function () {
     shell.exec('dotenv -- cross-var curl -d \'site=%AEM_SITE%\' -d \'artifact=%GIT_ARTIFACT_ID%\' -d \'expiration=%GIT_HASH_EXPIRATION%\' -d \'hash=%GIT_HASH%\' %AEM_URL%/aem/update.theme.html');
   })
   .help()

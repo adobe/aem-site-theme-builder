@@ -10,12 +10,20 @@
   },
   "scripts": {},
   "dependencies": {
-    "browser-sync": "^2.27.4",
+    "browser-sync": "2.27.4",
+    "cheerio": "1.0.0-rc.10",
     "connect": "3.7.0",
     "dotenv": "8.2.0",
     "http-proxy": "1.18.1",
     "shelljs": "0.8.4",
-    "tcp-port-used": "^1.0.2",
+    "tcp-port-used": "1.0.2",
     "yargs": "16.1.0"
+  },
+  "devDependencies": {
+    "eslint": "8.0.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0"
   }
 }
