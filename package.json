@@ -17,7 +17,8 @@
     "http-proxy": "1.18.1",
     "shelljs": "0.8.4",
     "tcp-port-used": "1.0.2",
-    "yargs": "16.1.0"
+    "yargs": "16.1.0",
+    "zlib": "^1.0.5"
   },
   "devDependencies": {
     "eslint": "8.0.0",
