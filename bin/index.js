@@ -13,6 +13,8 @@ const shell = require('shelljs');
 const proxy = require('../lib/proxy');
 const browserSync = require('../lib/browserSync');
 const findPort = require('../lib/findPort');
+const dotenv = require('dotenv');
+const env = dotenv.config().parsed;
 
 require('yargs')
   .scriptName('aem-site-theme-builder')
@@ -28,7 +30,7 @@ require('yargs')
     await proxy({ ...CONFIG, port: portProxy });
     // wait for proxy to start before finding next port for browser sync
     const portBrowserSync = await findPort(portProxy);
-    browserSync({ port: portBrowserSync, portProxy });
+    browserSync({ port: portBrowserSync, portProxy, siteName: env.AEM_SITE });
   })
   .command('deploy', 'Deploys your theme to AEM instance', () => {}, function () {
     shell.exec('dotenv -- cross-var curl -d \'site=%AEM_SITE%\' -d \'artifact=%GIT_ARTIFACT_ID%\' -d \'expiration=%GIT_HASH_EXPIRATION%\' -d \'hash=%GIT_HASH%\' %AEM_URL%/aem/update.theme.html');
