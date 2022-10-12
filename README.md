@@ -42,12 +42,19 @@ In order to make best use of theme-builder you have to run the live preview whic
 
 ### Environment Variables
 
-Theme Builder scripts are based on the environment variables you provide. These variables are used to properly provide live preview and deploy functionality of the AEM Site Theme Builder. Here is the list of required variables:
+Theme Builder scripts are based on the environment variables you provide. These variables are used to properly provide live preview and deploy functionality of the AEM Site Theme Builder. 
+
+Here is the list of required variables:
 
 ```
 AEM_URL=<URL of the AEM as a Cloud Service instance>
 AEM_SITE=<name of the AEM site>
 AEM_PROXY_PORT=<localhost proxy server port>
+```
+Here is the list of optional variables:
+
+```
+AEM_ADAPTIVE_FORM=<name of the AEM Form>
 ```
 
 Recommended way to define site variables is to use / create `.env` file within your theme project repository.
