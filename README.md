@@ -54,8 +54,15 @@ AEM_PROXY_PORT=<localhost proxy server port>
 Here is the list of optional variables:
 
 ```
+AEM_TOKEN=<AEM local development access token>
+AEM_USERNAME=<AEM username>
+AEM_PASSWORD=<AEM password>
 AEM_ADAPTIVE_FORM=<name of the AEM Form>
 ```
+
+Authenticated proxy is supported via Basic Auth with `AEM_USERNAME` / `AEM_PASSWORD` or Bearer Token with `AEM_TOKEN`. 
+
+To generate a local development access token, please read the [documentation](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html).
 
 Recommended way to define site variables is to use / create `.env` file within your theme project repository.
 
