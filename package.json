@@ -10,20 +10,19 @@
   },
   "scripts": {},
   "dependencies": {
-    "browser-sync": "2.27.4",
+    "browser-sync": "3.0.4",
     "connect": "3.7.0",
     "dotenv": "8.2.0",
     "http-proxy": "1.18.1",
-    "shelljs": "0.8.4",
+    "shelljs": "0.8.5",
     "tcp-port-used": "1.0.2",
-    "yargs": "16.1.0",
-    "zlib": "^1.0.5"
+    "yargs": "16.1.0"
   },
   "devDependencies": {
-    "eslint": "8.0.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.25.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0"
+    "eslint": "8.56.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^16.0.0",
+    "eslint-plugin-promise": "^6.0.0"
   }
 }
